@@ -76,6 +76,8 @@ Architecture of the project:
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => server.cert (in order for the page to open as a secure https link and not http)  
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => server.key (in order for the page to open as a secure https link and not http)  
 
+I started by implementing the design and then the logic step by step (starting with an array of words that I created in the code for testing and at the end when everything was working I replaced the array with the API) and finally put on some touches such as the sounds.
+
 /********** REFERENCES **********/
 
 https://www.youtube.com/watch?v=XH5OW46yO8I  
