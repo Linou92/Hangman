@@ -12,18 +12,18 @@
 
 /********** DESIGN **********/
 
-For designing, I used html and css. I usually use bootstrap but since it's a small project and also I could achieve what I wanted using css so I didn't feel the need to use bootstrap.
+For designing, I used html and css. I usually use bootstrap but since it's a small project and also I could achieve what I wanted using css so I didn't feel the need to use bootstrap.  
 
 At first, I went with an input and a "try" button in order for the player to tap the letter but then I figured out that it wasn't very convenient since the user gets to click and move the mouse many times at different places so I changed it and went with a "list" of the alphabets and so the user can directly click on the desired letter.
-Once the letter has been chosen/clicked, it changes color and got disabled so the user cannot choose the same letter twice.
+Once the letter has been chosen/clicked, it changes color and got disabled so the user cannot choose the same letter twice.  
 
-After the letters, we have the hint which appears when the hint button is clicked and shows the definition of the word. 
+After the letters, we have the hint which appears when the hint button is clicked and shows the definition of the word.   
 
-After that, we have the hangman which appears by steps depending on the wrong attempts.
+After that, we have the hangman which appears by steps depending on the wrong attempts.  
 
-Then, we have the word that should be guessed. It first appears as dashes and everytime a correct letter is guessed, the dash transforms into the letter. If the same letter exists many times in the word, it appears in all its places.
+Then, we have the word that should be guessed. It first appears as dashes and everytime a correct letter is guessed, the dash transforms into the letter. If the same letter exists many times in the word, it appears in all its places.  
 
-Then, we have the buttons:
+Then, we have the buttons:  
   - hint shows the definition of the word
   - play again restarts the game by refreshing the page
   - quit game shows a "goodbye" popup
@@ -58,20 +58,20 @@ Used languages:
  - Html
  - CSS
  
-Architecture of the project:
-  Hangman => node_modules
-          => public 
-               => sound effects (won, lost and bye .mp3)
-          => views
-               => css
-                    => style.css (styling of the game and page)
-               => js
-                    => main.js (logic and code of the game)
-               => home.ejs (design of the game and page)
-          => app.js (runs the server)
-          => packages .json (contains all the used packages)
-          => server.cert (in order for the page to open as a secure https link and not http)
-          => server.key (in order for the page to open as a secure https link and not http)
+Architecture of the project:  
+  Hangman => node_modules  
+          => public  
+               => sound effects (won, lost and bye .mp3)  
+          => views  
+               => css  
+                    => style.css (styling of the game and page)  
+               => js  
+                    => main.js (logic and code of the game)  
+               => home.ejs (design of the game and page)  
+          => app.js (runs the server)  
+          => packages .json (contains all the used packages)  
+          => server.cert (in order for the page to open as a secure https link and not http)  
+          => server.key (in order for the page to open as a secure https link and not http)  
 
 /********** REFERENCES **********/
 
