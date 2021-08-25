@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hangman Game</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+		<!-- title of the page -->
+		<center><h2> Welcome to the Hangman Game </h2></center>
+		
+		<!-- info on how to play the game -->
+		<div class="info">Try to guess the hidden word below by choosing one letter at a time ! For each mistake, a part of the hangman will be drawn. The game is over either when the hangman is fully drawn (You lost ! &#128577;) or when you guess the right word on time (You won ! &#129321;) !</div>
+		
+		<!-- user guesses the letter -->
+		<div class="letters"></div>
+
+		<div id="randomWord" style="display: none;"></div>
+		<div id="defWord" class="definition"></div>
+		
+		<!-- hint button -->
+		<div id="getHintButton">
+			<button class="hintButton" id="hint">Hint</button>
+		</div>
+
+		<!-- play again button -->
+		<div id="againButton">
+			<button class="playAgainButton" onclick="restartGame()">Play Again</button>
+		</div>
+
+		<!-- quit game button -->
+		<div id="exitButton">
+			<button class="quitButton" id="quit">Quit Game</button>
+		</div>
+
+		<!-- modal popup for the exit button -->
+		<center><div class="modal-container" id="modalContainer" style="display: none;">
+			<div class="modal">
+				<h1> Bye bye ! See you ! &#128075; </h1>
+				<p> Thanks for playing with us ! We hope to see you back again soon. </p>
+				<button class="closeButton" id="close"> Close </button>
+			</div>
+		</div></center>
+
+		<!-- modal popup when user wins -->
+		<center><div class="modal-container" id="modalContainerWin" style="display: none;">
+			<div class="modal">
+				<h1> Congrats you won ! &#129321; </h1>
+				<p> Good job. </p>
+				<button class="closeButton" id="closeWin"> Close </button>
+			</div>
+		</div></center>
+
+		<!-- modal popup when user looses -->
+		<center><div class="modal-container" id="modalContainerLost" style="display: none;">
+			<div class="modal">
+				<h1> Sorry you lost ! &#128577; </h1>
+				<p class="para"> Better luck next time! </p>
+				<button class="closeButton" id="closeLost"> Close </button>
+			</div>
+		</div></center>
+		
+		<!-- guessing word -->
+		<div class="word" style="font-size: 200%; font-weight: bold;"></div>
+		
+		<!-- hangman drawing -->
+		<!-- container of the drawing -->
+		<div class="hangmanDraw">
+			<!-- the drawing itself -->
+			<div class="theDraw">
+				<div class="theStand"></div>
+				<div class="theHang"></div>
+				<div class="theRope"></div>
+				<div class="theMan">
+					<div class="head"></div>
+					<div class="body"></div>
+					<div class="hands"></div>
+					<div class="legs"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer of the page -->
+		<footer>
+			<hr>
+			&copy; 2021 SVT Design Arbetsprov. Designed by Lina Abu Hijleh.
+			<hr><hr>
+		</footer>
+
+	<!--- SCRIPT FILES -->
+	<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	<script src="/js/main.js"></script>
+	<!--- END OF SCRIPT FILES -->
+
+</body>
+</html>
+

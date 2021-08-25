@@ -1,0 +1,315 @@
+/* overall page styling */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: .2s background;
+  font-family: 'Segoe UI', 'Roboto', arial, sans-serif;
+  background: rgb(255,0,53);
+  background: linear-gradient(135deg, rgba(105, 242, 220, 0.7) 0%, rgba(246, 170, 188, 0.7) 100%);
+  color: white;
+  height: 100vh;
+}
+
+.info, h2, footer {
+  font-style: italic;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 35%;
+  bottom: 0;
+}
+
+/* styling the definition of the word (hint) */
+.definition{
+  text-align: center;
+  display: none;
+}
+
+/* styling the letters */
+
+.letters{
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+}
+
+.letters.finished{
+  pointer-events: none;
+}
+
+.letters .letterBox{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 10px;
+  line-height: 35px;
+}
+
+.letters .letterBox.clicked{
+  background-color: rgba(252, 0, 59, 0.2);
+  pointer-events: none;
+}
+
+/* styling the play again, quit and close (of the modal popups) buttons */
+
+.quitButton, .playAgainButton, .closeButton, .hintButton {
+  background: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  color: white;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  transition: .2s background;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#exitButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+#againButton {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+}
+
+#getHintButton {
+  position: fixed;
+  bottom: 150px;
+  right: 75px
+}
+
+
+/* styling the guessing word */
+
+.word {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  max-width: 100vw;
+}
+
+/* styling the modals popups */
+
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-container.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal{
+  width: 600px;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  text-align: center;
+  background-color:  rgba(246, 170, 188, 0.6);
+}
+
+.modal p{
+  font-style: italic; 
+  opacity: 0.7;
+}
+
+/* styling the hangman and the way of drawing */
+
+.hangmanDraw{
+   flex: 1;
+   background: none;
+   padding: 20px;
+   height: 320px;
+}
+
+.hangmanDraw .theDraw{
+  width: 60px;
+  height: 230px;
+  border-bottom: 4px solid rgba(76, 166, 151, 1);
+  position: relative;
+  margin: auto;
+  display: none;
+}
+
+.hangmanDraw .theStand{
+  position: absolute;
+  width: 4px;
+  background-color: rgba(76, 166, 151, 1);
+  height: 100%;
+  left: 50%;
+  margin-left: -2px;
+  display: none;
+}
+
+.hangmanDraw .theHang{
+  display: none;
+}
+
+.hangmanDraw .theHang:before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  background-color: rgba(76, 166, 151, 1);
+  width: 100px;
+  left: 30px;
+  top: 15px;
+}
+
+.hangmanDraw .theHang:after{
+  content: '';
+  position: absolute;
+  height: 30px;
+  background-color: rgba(76, 166, 151, 1);
+  width: 4px;
+  left: 130px;
+  top: 15px;
+}
+
+.hangmanDraw .theRope{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 97px;
+  top: 55px;
+  border-radius:0% 100% 100% 100%;
+  -webkit-transform: rotate(45deg);
+  box-shadow: 0 12px 15px 0 rgba(76, 166, 151, 1);
+  border: 4px dashed rgba(76, 166, 151, 1);
+  display: none;
+}
+
+.hangmanDraw .theMan .head{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid rgba(76, 166, 151, 1);
+  position: absolute;
+  left: 107px;
+  top: 75px;
+  display: none;
+}
+
+.hangmanDraw .theMan .body{
+  position: absolute;
+  background-color: rgba(76, 166, 151, 1);
+  width: 4px;
+  height: 100px;
+  top: 125px;
+  left: 130px;
+  display: none;
+}
+
+.hangmanDraw .theMan .hands{
+  display: none;
+}
+
+.hangmanDraw .theMan .hands:before{
+  content: '';
+  width: 50px;
+  position: absolute;
+  height: 4px;
+  background-color: rgba(76, 166, 151, 1);
+  left: 85px;
+  top: 150px;
+  transform: rotate(30deg);
+}
+
+.hangmanDraw .theMan .hands:after{
+  content: '';
+  width: 50px;
+  position: absolute;
+  height: 4px;
+  background-color: rgba(76, 166, 151, 1);
+  left: 130px;
+  top: 150px;
+  transform: rotate(-30deg);
+}
+
+.hangmanDraw .theMan .legs{
+  display: none;
+}
+
+.hangmanDraw .theMan .legs:before{
+  content: '';
+  width: 50px;
+  position: absolute;
+  height: 4px;
+  background-color: rgba(76, 166, 151, 1);
+  left: 85px;
+  top: 235px;
+  transform: rotate(-30deg);
+}
+
+.hangmanDraw .theMan .legs:after{
+  content: '';
+  width: 50px;
+  position: absolute;
+  height: 4px;
+  background-color: rgba(76, 166, 151, 1);
+  left: 130px;
+  top: 235px;
+  transform: rotate(30deg);
+}
+
+.hangmanDraw.wrong-1 .theDraw{
+  display: block;
+}
+
+.hangmanDraw.wrong-2 .theStand{
+  display: block;
+}
+
+.hangmanDraw.wrong-3 .theHang{
+  display: block;
+}
+
+.hangmanDraw.wrong-4 .theRope{
+  display: block;
+}
+
+.hangmanDraw.wrong-5 .head{
+  display: block;
+}
+
+.hangmanDraw.wrong-6 .body{
+  display: block;
+}
+
+.hangmanDraw.wrong-7 .hands{
+  display: block;
+}
+
+.hangmanDraw.wrong-8 .legs{
+  display: block;
+}
