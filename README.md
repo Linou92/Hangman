@@ -75,7 +75,7 @@ Architecture of the project:
 
 /********** REFERENCES **********/
 
-https://www.youtube.com/watch?v=XH5OW46yO8I \n
-https://nostarch.com/download/JS4K_ch7.pdf \n
+https://www.youtube.com/watch?v=XH5OW46yO8I  
+https://nostarch.com/download/JS4K_ch7.pdf  
 https://mixkit.co/free-sound-effects/
  
