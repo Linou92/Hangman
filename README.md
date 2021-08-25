@@ -60,7 +60,7 @@ Used languages:
  
 Architecture of the project:  
   Hangman => node_modules  
-          => public  
+    => public  
                => sound effects (won, lost and bye .mp3)  
           => views  
                => css  
