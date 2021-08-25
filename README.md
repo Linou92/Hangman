@@ -1,6 +1,6 @@
 # Hangman using Javascript and https://random-words-api.vercel.app/word API
 
-![Screenshot](Screenshot.png)
+![Screenshot](homePage.png)
 
 /********** HOW TO PLAY? **********/
  
