@@ -60,8 +60,8 @@ Used languages:
  
 Architecture of the project:  
   Hangman => node_modules  
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp => public  
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp => sound effects (won, lost and bye .mp3)  
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => public  
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => sound effects (won, lost and bye .mp3)  
           => views  
                => css  
                     => style.css (styling of the game and page)  
