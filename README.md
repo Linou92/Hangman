@@ -1,6 +1,6 @@
 # Hangman using Javascript and https://random-words-api.vercel.app/word API
 
-/**** How to play? ****/
+/********** HOW TO PLAY? **********/
  
  1. download the project
  2. make sure to have nodeJS and express installed
@@ -10,7 +10,7 @@
  6. Have Fun ! :)
 
 
-/**** Design ****/
+/********** DESIGN **********/
 
 For designing, I used html and css. I usually use bootstrap but since it's a small project and also I could achieve what I wanted using css so I didn't feel the need to use bootstrap.
 
@@ -34,7 +34,7 @@ Finally, we have the popups messages:
   - the quiting popup shows a message and plays a sound effect accordingly
 
 
-/**** Logic ****/
+/********** LOGIC **********/
 
 The logic of the game has been thought the same way as we play it with pen and paper (we first put the alphabets, then the guessing word, then we draw the hangman according to the game's rules)
  1. Pick a random word from the API
@@ -49,7 +49,7 @@ The logic of the game has been thought the same way as we play it with pen and p
 In order to draw the hangman, several methods exists such as canvas 2d etc but I chose to draw it as follows because I think it's more understandable and more logic:
 Each part of the draw represents a div which are all invisible when starting the game. Each time the user guesses the wrong letter, a div appears. They appears in order.
 
-/**** Implementation ****/
+/********** IMPLEMENTATION **********/
 
 Used languages:
  - Javascript
@@ -73,9 +73,9 @@ Architecture of the project:
           => server.cert (in order for the page to open as a secure https link and not http)
           => server.key (in order for the page to open as a secure https link and not http)
 
-/**** References ****/
+/********** REFERENCES **********/
 
-https://www.youtube.com/watch?v=XH5OW46yO8I
-https://nostarch.com/download/JS4K_ch7.pdf
+https://www.youtube.com/watch?v=XH5OW46yO8I \n
+https://nostarch.com/download/JS4K_ch7.pdf \n
 https://mixkit.co/free-sound-effects/
  
