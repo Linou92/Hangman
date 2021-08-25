@@ -59,7 +59,7 @@ Used languages:
  - CSS
  
 Architecture of the project:  
-  Hangman => 
+  Hangman  
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => node_modules  
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => public  
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => sound effects (won, lost and bye .mp3)  
